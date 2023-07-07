@@ -1,5 +1,8 @@
 
 
+## Manuals: 
+- https://gist.github.com/huntrar/e42aee630bee3295b2c671d098c81268
+
 
 mkdir /root/secrets && chmod 700 /root/secrets
 head -c 64 /dev/urandom > /root/secrets/crypto_keyfile.bin && chmod 600 /root/secrets/crypto_keyfile.bin
@@ -19,3 +22,23 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 
 chmod 700 /boot
+
+
+## Network
+pacman -S iwd
+systemctl enable iwd
+systemctl enable systemd-resolved
+
+## i3
+pacman -S i3-wm
+https://github.com/polpettone/i3-config
+
+## User and groups
+
+useradd -m $NEW_USER
+
+
+
+
+
+
